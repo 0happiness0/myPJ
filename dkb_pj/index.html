@@ -8,12 +8,13 @@
   <title>도깨비 응용</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/media.css">
+  <script src="js/common.js"></script>
 </head>
 
 <body>
   <!-- 상단영역 -->
   <div id="top">
-    <header class="top">
+    <header class="top inbox">
       <h1 class="logo"><img src="images/header_logo.png" alt="헤더로고"></h1>
       <aside class="top_menu">
         <ul>
@@ -41,13 +42,13 @@
           <li><a href="#" id="login_btn">로그인</a></li>
         </ul>
       </aside>
-      <div class="ham"></div>
+      <div class="ham" onclick="showGnb()"></div>
     </header>
   </div>
 
   <!-- 메인영역 -->
   <div id="cont">
-    <div class="cont">
+    <main class="cont inbox">
       <!-- gnb메뉴 -->
       <nav class="gnb">
         <ul class="left_menu">
@@ -125,6 +126,24 @@
           </div>
         </div>
       </div>
+      <div class="coin">
+        <div class="coin_box">
+          <img src="images/game_chip_1.png" alt="코인그림1">
+          <img src="images/game_chip_2.png" alt="코인그림2">
+          <img src="images/game_chip_3.png" alt="코인그림3">
+          <img src="images/game_chip_4.png" alt="코인그림4">
+          <img src="images/game_chip_5.png" alt="코인그림5">
+          <img src="images/game_chip_7.png" alt="코인그림6">
+        </div>
+        <div class="coin_shadow">
+          <img src="images/off_shadow_1.png" alt="코인그림자1">
+          <img src="images/off_shadow_2.png" alt="코인그림자2">
+          <img src="images/off_shadow_3.png" alt="코인그림자3">
+          <img src="images/off_shadow_4.png" alt="코인그림자4">
+          <img src="images/off_shadow_5.png" alt="코인그림자5">
+          <img src="images/off_shadow_7.png" alt="코인그림자6">
+        </div>
+      </div>
       <aside class="banner">
         <a href="#">
           <img src="images/main_top_side_banner_mpoker.png" alt="윈조이 포커 배너">
@@ -133,12 +152,12 @@
           <img src="images/_sample_main_top_banner2.png" alt="게임머니 교환소 배너">
         </a>
       </aside>
-    </div>
+    </main>
   </div>
 
   <!-- 하단영역 -->
   <div id="info">
-    <footer class="info">
+    <footer class="info inbox">
       <div class="infobox">
         <div class="footer_logo">
           <a href="#">
@@ -183,6 +202,7 @@
         </div>
       </div>
     </footer>
+    <div class="line"></div>
   </div>
 </body>
 

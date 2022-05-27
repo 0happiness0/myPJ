@@ -41,15 +41,18 @@ a{
   text-decoration: none;
   color: #000;
 }
+.inbox{
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
 
 /* 상단영역 */
 .top{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 128rem;
   height: 5rem;
-  margin: 0 auto;
 }
 .top_menu ul{
   display: flex;
@@ -126,8 +129,9 @@ a{
 /* 메인영역 */
 .cont{
   width: 100%;
-  background: url(../images/bg_main_toparea.png) no-repeat;
+  max-width: none;  /* .inbox에 max-width:128rem을 줘서 이미지가 더 이상 커지지 않기 때문에 none을 줘야 화면에 꽉참 */
   height: 70rem;
+  background: url(../images/bg_main_toparea.png) no-repeat;
 }
 
 /* gnb메뉴 */
@@ -159,6 +163,15 @@ a{
 }
 
 /* 캐릭터박스 */
+.coin_box {
+  position: absolute;
+  bottom: 0;
+  left: 11rem;
+  max-width: 128rem;
+  margin: 0 auto;
+  white-space: nowrap;
+  z-index: 11;
+}
 .cbx{
   display: flex;
   justify-content: center;
@@ -190,19 +203,19 @@ a{
   transition: .3s;
 }
 .cha:hover .ci{
-  margin-top: -7rem;
+  margin-top: -30%;
 }
 .ci img{
   width: 100%;
 }
 .cha:hover .ci img{
-  height: 200px;
+  height: 20rem;
 }
 .desc{
   height: 0;
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, .5);
-  /* 마우스 오버하면 설명부분이 고정되지 않고 이미지(.ci) 따라서 위로 올라가는 이유는?  */
+  transition: height .4s ease-out;
 }
 .cha:hover .desc{
   height: 18.5rem;
@@ -218,6 +231,36 @@ a{
   color: #fff;
   padding: 0 1rem;
   text-align: justify;
+}
+/* 코인이미지 */
+.coin_box{
+  position: absolute;
+  bottom: -4rem;
+  left: 25rem;
+  max-width: 128rem;
+  margin: 0 auto;
+  white-space: nowrap;
+  z-index: 11;
+}
+.coin_box img{
+  width: 22rem;
+  opacity: .3;
+  margin-right: -6rem;
+}
+.coin_box img:hover{
+  transform: scale(1.3);
+  opacity: 1;
+}
+.coin_shadow{
+  position: absolute;
+  bottom: -3.5rem;
+  left: 25rem;
+  white-space: nowrap;
+}
+.coin_shadow img{
+  max-width: 22rem;
+  margin-right: -6rem;
+  
 }
 /* 배너 */
 .banner{
@@ -236,10 +279,8 @@ a{
 .infobox{
   display: flex;
   align-items: center;
-  max-width: 128rem;
   height: 7.2rem;
   padding-left: 12rem;
-  border-bottom: 1px solid #dcdcdc;
 }
 .footer_logo{
   margin-right: 4rem;
@@ -304,4 +345,10 @@ address{
 }
 .mark img{
   width: 100%;
+}
+.line{
+  position: relative;
+  bottom: 17.5rem;
+  width: 100%;
+  border-bottom: 1px solid #dcdcdc;
 }
