@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+/* 1070px 이하 미디어쿼리 */
+@media screen and (max-width:1070px){
+  .left_menu a, .right_menu a{
+    font-size: 1.5rem;
+  }
+  .left_menu a{
+    padding-right: 2rem;
+  }
+  .right_menu a{
+    padding-left: 2rem;
+  }
+
+  .banner{
+    left: 0;
+  }
+  .addr{
+    margin-left: 13.5rem;
+  }
+  .grade_box{
+    margin: 0 3rem 0 6rem;
+  }
+
+
+}
+
+
+/* 800px 이하 미디어쿼리 */
+@media screen and (max-width:800px){
+  .logo{
+    margin: 0 auto;
+  }
+  .ham{
+    display: block;
+  }
+  .top.on .ham{
+    position: absolute;
+    top: .5rem;
+    right: 5rem;
+    color: #000; /* #fff */
+    z-index: 3;
+  }
+  .top.on .ham::before{
+    content: 'X';
+    position: absolute;
+    font-size: 1.8rem;
+    transform: scale(1.5, 1);
+  }
+  .top.on .top_menu{
+    display: none;
+  }
+  .top_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.8);
+    z-index: 3;
+  }
+  .top_menu ul{
+    display: block;
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  /* 서브메뉴 */
+  .smenu{
+    /* 서브메뉴 보일 때 메인 메뉴들이 아래로 내려가게 하는 방법 */
+    top: 5rem;
+    left: 0;
+    width: 40vw;
+    border: none;
+    z-index: 1;
+  }
+  .smenu ol{
+    background-color: #fff;
+  }
+  .smenu li{
+    border-bottom: none;
+  }
+  .smenu a{
+    font-size: 1.6rem;
+    line-height: 4rem;
+    color: #000;
+  }
+  .top_menu > ul > li > a{
+    font-size: 2.5rem;
+    line-height: 6rem;
+    color: #fff;
+  }
+  #login_btn{
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+  }
+  .main_logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* gnb메뉴 */
+  .left_menu, .right_menu{
+    position: absolute;
+    top: 17rem;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+  .right_menu{
+    top: 21rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .left_menu a, .right_menu a{
+    font-size: 1.6rem;
+    padding: 2rem;
+    white-space: nowrap;
+  }
+
+  /* 메인영역 */
+  .cont{
+    padding-bottom: 8rem;
+    /* 배경이미지 세로길이 늘리는 방법은? */
+  }
+  .cbx{
+    position: absolute;
+    top: 25rem;
+    left: 1.8rem;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .cha{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: -150vh;
+  }
+  .cha:hover .ci{
+    margin-top: 0;
+  }
+  .banner{
+    display: none;
+  }
+  .desc h2{
+    font-size: 1.5rem;
+    padding-bottom: 0;
+  }
+  .desc p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  /* 하단영역 */
+  /* 이미지(.ci) 마우스 오버하면 하단영역이 밑으로 안내려가고 제자리에 그대로 있는 이유는?
+
+  맨 아랫부분 공간이 많이 남아 줄이고 싶은데 어떻게 줄여야 하는지?
+  */
+  .infobox{
+    position: relative;
+    display: block;
+    padding-left: 0;
+    border-bottom: none;
+  }
+  .footer_logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 0;
+  }
+  .infobox ul{
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+  }
+  .infobox a{
+    padding: 0 1rem;
+    font-size: 1.1rem;
+  }
+  .addr{
+    display: block;
+    margin: 1rem 2rem;
+  }
+  address{
+    padding: 1rem;
+    border: 5px double #777;
+  }
+  .grade_box{
+    display: block;
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+  .num{
+    position: relative;
+    top: .1rem;
+    left: -.1rem;
+  }
+  .mark{
+    position: relative;
+    bottom: 11rem;
+    left: 25rem;
+  }
+
+}
