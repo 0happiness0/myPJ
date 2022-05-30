@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url(reset.css);
+@import url(common.css);
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 /* font-family: 'Nanum Gothic', sans-serif; */
 
@@ -7,131 +9,17 @@
   outline: 1px dotted red;
 } */
 
-/* 공통css */
-*{
-  font-family: 'Nanum Gothic', sans-serif;
-}
-
-html, body, ul, ol, li, h1, h2, h3, h4, h5, h6{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  font-size: 10px;
-}
-body::after{
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  background-color: transparent;
-  z-index: 9999;
-  animation: delAni 3s 3s forwards;
-}
-@keyframes delAni {
-  to{
-    height: 0;
-  }
-}
-
-a{
-  text-decoration: none;
-  color: #000;
-}
-.inbox{
-  max-width: 128rem;
-  margin: 0 auto;
-}
 
 
-/* 상단영역 */
-.top{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 5rem;
-}
-.top_menu ul{
-  display: flex;
-  align-items: center;
-}
-.top_menu > ul > li{
-  position: relative;
-  margin: 0 .3rem;
-}
-.top_menu > ul > li:nth-child(1)::after,
-.top_menu > ul > li:nth-child(2)::after{
-  content: '▼';
-  display: block;
-  position: absolute;
-  top: .2rem;
-  right: -.3rem;
-  color: #444;
-}
-.top_menu a{
-  font-size: 1.4rem;
-  padding: .8rem 1.2rem;
-}
-#login_btn{ /* 클래스로 주면 안먹히는 이유?  */
-  display: block;
-  text-align: center;
-  line-height: 1.2rem;
-  background-color: #ffc600;
-  border-radius: 20px;
-  font-size: 1.2rem;
-}
 
-/* 서브메뉴 */
-.smenu{
-  display: none;
-  position: absolute;
-  top: 2.5rem;
-  left: .5rem;
-  width: 7rem;
-  text-align: center;
-  background: #fff;
-  border: 1px solid #808080;
-}
-.top_menu li:hover .smenu{
-  display: block;
-}
-.smenu a{
-  font-size: 1.2rem;
-  line-height: 3rem;
-  color: #777;
-}
-.smenu li{
-  border-bottom: 1px solid #ddd;
-}
-.smenu li:hover{
-  background-color: #eee;
-}
-.smenu li:hover a{
-  color: #000;
-}
 
-/* 햄버거버튼 */
-.ham{
-  display: none;
-  position: absolute;
-  right: 3rem;
-  transform: scale(1.5, 2);
-}
-.ham::before{
-  content: '≡';
-  display: block;
-  font-size: 3.5rem;
-  font-weight: bold;
-}
 /* 메인영역 */
 .cont{
   width: 100%;
+  height: 240rem;
   max-width: none;  /* .inbox에 max-width:128rem을 줘서 이미지가 더 이상 커지지 않기 때문에 none을 줘야 화면에 꽉참 */
   height: 70rem;
-  background: url(../images/bg_main_toparea.png) no-repeat;
+  background: url(../images/bg_main_toparea.png) no-repeat 0/240rem;
 }
 
 /* gnb메뉴 */
@@ -235,7 +123,7 @@ a{
 /* 코인이미지 */
 .coin_box{
   position: absolute;
-  bottom: -4rem;
+  bottom: -5rem;
   left: 25rem;
   max-width: 128rem;
   margin: 0 auto;
@@ -248,12 +136,12 @@ a{
   margin-right: -6rem;
 }
 .coin_box img:hover{
-  transform: scale(1.3);
+  transform: scale(1.2);
   opacity: 1;
 }
 .coin_shadow{
   position: absolute;
-  bottom: -3.5rem;
+  bottom: -4.5rem;
   left: 25rem;
   white-space: nowrap;
 }
@@ -275,80 +163,3 @@ a{
   margin-bottom: 5rem;
 }
 
-/* 하단영역 */
-.infobox{
-  display: flex;
-  align-items: center;
-  height: 7.2rem;
-  padding-left: 12rem;
-}
-.footer_logo{
-  margin-right: 4rem;
-}
-.infobox ul{
-  display: flex;
-}
-.infobox a{
-  padding: 0 1.5rem;
-  font-size: 1.4rem;
-  color: #898989;
-}
-#privacy{  /* 클래스로 주면 안먹히는 이유?  */
-  color: #000;  
-}
-.addr{
-  display: flex;
-  justify-content: flex-start;
-  margin: 2rem 0 2rem 32.5rem;
-}
-address{
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  font-style: normal;
-  color: #888;
-}
-.grade_box{
-  display: flex;
-  margin: 0 5rem 0 12rem;
-}
-.gbox{
-  height: 6.3rem;
-  padding: .3rem 1rem;
-  background-color: #b11829;
-  color: #e18989;
-}
-.gbox li{
-  font-size: 1.1rem;
-  line-height: 1.8;
-  border-bottom: 1px solid #c14654;
-  /* .gbox li에 패딩을 줘서 boder-bottom 선이 앞 뒤로 끊기는데 안끊기고 처음부터 끝까지 선을 주는방법은? */
-}
-.gbox li:last-child{
-  border-bottom: none;
-}
-.gbox span{
-  color: #ebd3d3;
-}
-.grade{
-  width: 12.6rem;
-}
-.num{
-  width: 17.6rem;
-  margin-left: .1rem;
-}
-.copy{
-  margin-top: 2rem;
-}
-.mark{
-  width: 6.8rem;
-  height: 8.1rem;
-}
-.mark img{
-  width: 100%;
-}
-.line{
-  position: relative;
-  bottom: 17.5rem;
-  width: 100%;
-  border-bottom: 1px solid #dcdcdc;
-}

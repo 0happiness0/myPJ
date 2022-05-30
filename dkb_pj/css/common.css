@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+.inbox{
+  max-width: 128rem;
+  margin: 0 auto;
+}
+/* 상단영역 */
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+.top_menu ul{
+  display: flex;
+  align-items: center;
+}
+.top_menu > ul > li{
+  position: relative;
+  margin: 0 .3rem;
+}
+.top_menu > ul > li:nth-child(1)::after,
+.top_menu > ul > li:nth-child(2)::after{
+  content: '▼';
+  display: block;
+  position: absolute;
+  top: .2rem;
+  right: -.3rem;
+  color: #444;
+}
+.top_menu a{
+  font-size: 1.4rem;
+  padding: .8rem 1.2rem;
+}
+#login_btn{ 
+  display: block;
+  text-align: center;
+  line-height: 1.2rem;
+  background-color: #ffc600;
+  border-radius: 20px;
+  font-size: 1.2rem;
+}
+
+/* 서브메뉴 */
+.smenu{
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  left: .5rem;
+  width: 7rem;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #808080;
+}
+.top_menu li:hover .smenu{
+  display: block;
+}
+.smenu a{
+  font-size: 1.2rem;
+  line-height: 3rem;
+  color: #777;
+}
+.smenu li{
+  border-bottom: 1px solid #ddd;
+}
+.smenu li:hover{
+  background-color: #eee;
+}
+.smenu li:hover a{
+  color: #000;
+}
+
+/* 햄버거버튼 */
+.ham{
+  display: none;
+  position: absolute;
+  right: 3rem;
+  transform: scale(1.5, 2);
+}
+.ham::before{
+  content: '≡';
+  display: block;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+/* 하단영역 */
+.infobox{
+  display: flex;
+  align-items: center;
+  height: 7.2rem;
+  padding-left: 12rem;
+}
+.footer_logo{
+  margin-right: 4rem;
+}
+.infobox ul{
+  display: flex;
+}
+.infobox a{
+  padding: 0 1.5rem;
+  font-size: 1.4rem;
+  color: #898989;
+}
+#privacy{  
+  color: #000;  
+}
+.addr{
+  display: flex;
+  justify-content: flex-start;
+  margin: 2rem 0 2rem 32.5rem;
+}
+address{
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-style: normal;
+  color: #888;
+}
+.grade_box{
+  display: flex;
+  margin: 0 5rem 0 12rem;
+}
+.gbox{
+  position: relative;
+  height: 6.3rem;
+  padding: .3rem 1rem;
+  background-color: #b11829;
+  color: #e18989;
+}
+.gbox li{
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+.gbox li:last-child{
+  border-bottom: none;
+}
+.gbox span{
+  color: #ebd3d3;
+}
+.bottom_line{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #c14654;
+}
+.grade{
+  width: 13.6rem;
+}
+.num{
+  width: 17.6rem;
+  margin-left: .1rem;
+}
+.copy{
+  margin-top: 2rem;
+}
+.mark{
+  width: 6.8rem;
+  height: 8.1rem;
+}
+.mark img{
+  width: 100%;
+}
+.line{
+  position: relative;
+  bottom: 17.5rem;
+  width: 100%;
+  border-bottom: 1px solid #dcdcdc;
+}

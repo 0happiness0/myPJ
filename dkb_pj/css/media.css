@@ -22,7 +22,6 @@
     margin: 0 3rem 0 6rem;
   }
 
-
 }
 
 
@@ -38,7 +37,6 @@
     display: block;
   }
   .top.on .ham{
-    /* x버튼 눌러도 안꺼지는 이유는? */
     position: absolute;
     top: .5rem;
     right: 5rem;
@@ -126,8 +124,8 @@
 
   /* 메인영역 */
   .cont{
-    padding-bottom: 8rem;
-    background: url(../images/bg_main_toparea.png) no-repeat top/100% 88rem;
+    height: 75rem;
+    background: url(../images/bg_main_toparea.png) no-repeat top/100% 75rem;
   }
   .cbx{
     position: absolute;
@@ -140,7 +138,7 @@
     width: 50%;
     margin: 0 auto;
     margin-top: -150vh;
-    transition: .3s;
+    transition: height .3s;
   }
   .cha:hover .ci{
     margin-top: 0;
@@ -148,6 +146,7 @@
   .banner{
     display: none;
   }
+  /* 호버상태에서 게임설명 박스가 나타날 때 하단영역이 밑으로 안내려가는 이유는? 윗줄 카드 호버하면 아랫줄 카드와의 간격이 없는데 간격을 주려면?  */
   .desc h2{
     font-size: 1.5rem;
     padding-bottom: 0;
@@ -160,14 +159,9 @@
     display: none;
   }
 
-
-
   /* 하단영역 */
-  /*
-  맨 아랫부분 공간이 많이 남아 줄이고 싶은데 어떻게 줄여야 하는지?
-  */
   .info{
-    height: 48rem;
+    height: 48rem; /* 높이를 지정해줘도 안먹힘 맨 아랫부분 공간이  남아 줄이고 싶은데 어떻게 줄여야 하는지?*/
   }
   .infobox{
     display: flex;

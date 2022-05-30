@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <!-- 상단영역 -->
+  <div id="top">
+    <header class="top inbox">
+      <h1 class="logo"><a href="#"><img src="images/header_logo.png" alt="헤더로고"></a></h1>
+      <aside class="top_menu">
+        <ul>
+          <li><a href="#">PC게임</a>
+            <div class="smenu">
+              <ol>
+                <li><a href="#">포커</a></li>
+                <li><a href="#">고스톱</a></li>
+                <li><a href="#">WPL</a></li>
+              </ol>
+            </div>
+          </li>
+          <li><a href="#">모방일게임</a>
+            <div class="smenu">
+              <ol>
+                <li><a href="#">포커</a></li>
+                <li><a href="#">고스톱</a></li>
+                <li><a href="#">WPL</a></li>
+              </ol>
+            </div>
+          </li>
+          <li><a href="#">캐쉬충전</a></li>
+          <li><a href="#">내 정보</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#" id="login_btn">로그인</a></li>
+        </ul>
+      </aside>
+      <div class="ham" onclick="showGnb()"></div>
+    </header>
+  </div>
+
+  <div id="login_cont">
+    <main class="login_cont">
+      <h2 class="login_txt">
+        <b>로그인</b>후 이용하실 수 있습니다.
+      </h2>
+      <form action="process.php" method="post" class="loginTxt inbox">
+        <div class="fbox">
+          <input type="text" id="mid" name="mid" placeholder="아이디를 입력해주세요" maxlength="10">
+        </div>
+        <div class="fbox">
+          <input type="password" id="mpw" name="mpw" placeholder="비밀번호를 입력해주세요" maxlength="10">
+        </div>
+        <div class="login_btn">
+          <input type="submit" id="sbtn" value="로그인">
+        </div>
+        <div class="add_box">
+          <ul>
+            <li>
+              <a href="#">아이디 찾기</a> |
+            </li>
+            <li>
+              <a href="#">비밀번호 찾기</a> |
+            </li>
+            <li>
+              <a href="#">회원가입</a>
+            </li>
+          </ul>
+        </div>
+      </form>
+      <div class="bottom_bg"></div>
+    </main>
+  </div>
+
+
+  <!-- 하단영역 -->
+  <div id="info">
+    <footer class="info inbox">
+      <div class="infobox">
+        <div class="footer_logo">
+          <a href="#">
+            <img src="images/footer_logo.png" alt="하단로고">
+          </a>
+        </div>
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">약관보기</a></li>
+          <li><a href="#" id="privacy">개인정보처리방침</a></li>
+          <li><a href="#">전자우편</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+      </div>
+      <div class="addr">
+        <address>
+          잼팟㈜ 대표이사 고세욱 서울특별시 구로구 구로5동 108-4 아스타빌 1층 (사업자 정보확인) <br>
+          고객센터 1670-4248 팩스 02-6008-9887 사업자등록번호 113-86-92644 호스팅서비스사업자 : 잼팟㈜ <br>
+          통신판매업신고번호 제 2019-서울영등포-1766호
+          <div class="copy">
+            Copyright © 2020. ZEMPOT Inc. All Rights Reserved.
+          </div>
+        </address>
+        <div class="grade_box">
+          <div class="gbox grade">
+            <ul>
+              <li>제명 : <span>윈조이_뉴포커</span></li>
+              <div class="bottom_line"></div> <!-- li에 보더바텀을 주면 패딩 때문에 앞,뒤로 선이 끊겨서 div로 선을 만들어 줘도 되는지? -->
+              <li>이용등급 : <span>청소년이용불가</span></li>
+              <div class="bottom_line"></div>
+              <li>제작년월일 : <span>2010.02.03</span></li>
+            </ul>
+          </div>
+          <div class="gbox num">
+            <ul>
+              <li>상호 : <span>잼팟㈜</span></li>
+              <div class="bottom_line"></div>
+              <li>등급분류번호 : <span>CC-NP-160428-008</span></li>
+              <div class="bottom_line"></div>
+              <li>신고 : <span>(등록)번호 제2019-000019호</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mark">
+          <img src="./images/gucc.png" alt="이용자보호인증마크">
+        </div>
+      </div>
+    </footer>
+    <div class="line"></div>
+  </div>
+</body>
+</html>
