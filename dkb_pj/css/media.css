@@ -127,7 +127,7 @@
   /* 메인영역 */
   .cont{
     padding-bottom: 8rem;
-    /* 배경이미지 세로길이 늘리는 방법은? */
+    background: url(../images/bg_main_toparea.png) no-repeat top/100% 88rem;
   }
   .cbx{
     position: absolute;
@@ -140,6 +140,7 @@
     width: 50%;
     margin: 0 auto;
     margin-top: -150vh;
+    transition: .3s;
   }
   .cha:hover .ci{
     margin-top: 0;
@@ -162,28 +163,22 @@
 
 
   /* 하단영역 */
-  /* 이미지(.ci) 마우스 오버하면 하단영역이 밑으로 안내려가고 제자리에 그대로 있는 이유는?
-
+  /*
   맨 아랫부분 공간이 많이 남아 줄이고 싶은데 어떻게 줄여야 하는지?
   */
+  .info{
+    height: 48rem;
+  }
   .infobox{
-    position: relative;
-    display: block;
-    padding-left: 0;
-    border-bottom: none;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 0;
   }
   .footer_logo{
-    position: absolute;
-    top: -7rem;
-    left: 50%;
-    transform: translateX(-50%);
     margin-right: 0;
-  }
-  .infobox ul{
-    position: absolute;
-    top: -3rem;
-    left: 1rem;
+    margin-bottom: 2.5rem;
   }
   .infobox a{
     padding: 0 1rem;
@@ -191,7 +186,7 @@
   }
   .addr{
     display: block;
-    margin: 1rem 2rem;
+    margin: 2rem 2rem;
   }
   address{
     padding: 1rem;

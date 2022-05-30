@@ -321,7 +321,7 @@ address{
   font-size: 1.1rem;
   line-height: 1.8;
   border-bottom: 1px solid #c14654;
-  /* .gbox에 패딩을 줘서 boder-bottom 선이 앞 뒤로 끊기는 해결방법은? */
+  /* .gbox li에 패딩을 줘서 boder-bottom 선이 앞 뒤로 끊기는데 안끊기고 처음부터 끝까지 선을 주는방법은? */
 }
 .gbox li:last-child{
   border-bottom: none;
