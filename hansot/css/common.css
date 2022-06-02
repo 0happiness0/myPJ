@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/* 공통 */
+.inbox{
+  max-width: 117rem;
+  margin: 0 auto;
+}
+h2{
+  font-size: 2.4rem;
+  color: #373737;
+  margin-bottom: 6.3rem;
+}
+.ir{
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 상단영역 */
+.top{
+  height: 3rem;
+}
+.top ul{
+  display: flex;
+  justify-content: flex-end;
+}
+.top a{
+  font-size: 1.1rem;
+  padding: 0 1.4rem;
+}
+.sns{
+  display: flex;
+}
+
+/* 메인영역 */
+.line{
+  margin: 3.5rem 0 2.3rem;
+  width: 5rem;
+  height: 0.4rem;
+  background-color: #fff;
+}
+.arrow_btn{
+  font-size: 1.5rem;
+  transition: .3s ease;
+}
+.arrow_btn::before{
+  content: '\f152';
+  position: relative;
+  top: 0.18rem;
+  font-family: fontawesome;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+
+}
+.fig_txt::after{
+  content: '';
+  position: absolute;
+  bottom: -0;
+  left: 0;
+  width: 100%;
+  height: .6rem;
+  background-color: #333;
+}
+
+/* 하단영역 */
+#info{
+  width: 100%;
+  height: 31rem;
+  background-color: #f2c000;
+}
+.notice{
+  display: flex;
+}
+.notice a{
+  padding: 0 1.3rem;
+  font-size: 1.6rem;
+  color: #333;
+}
+address{
+  font-style: normal;
+}
+address ul, address ol{
+  display: flex;
+}
+address a{
+  font-size: 1.5rem;
+  color: #333;
+}
+.copy{
+  text-align: center;
+}

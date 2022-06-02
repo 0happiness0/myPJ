@@ -124,15 +124,14 @@
 
   /* 메인영역 */
   .cont{
-    height: 75rem;
-    background: url(../images/bg_main_toparea.png) no-repeat top/100% 75rem;
+    min-height: 100vh; /* 하단 영역이 여전히 안내려감 */
+    background: url(../images/bg_main_toparea.png) no-repeat top/100% 100vh;
   }
   .cbx{
-    position: absolute;
-    top: 25rem;
-    left: 1.8rem;
+    position: static; /* static을 준 이유는? */
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 auto;
+    margin-top: 10rem; /* static은 위치이동의 변화가 없으므로 마진으로 위치이동 시켜야함 */
   }
   .cha{
     width: 50%;
@@ -143,10 +142,12 @@
   .cha:hover .ci{
     margin-top: 0;
   }
+  .cha:nth-child(2)~div{
+    padding-top: 1rem;
+  }
   .banner{
     display: none;
   }
-  /* 호버상태에서 게임설명 박스가 나타날 때 하단영역이 밑으로 안내려가는 이유는? 윗줄 카드 호버하면 아랫줄 카드와의 간격이 없는데 간격을 주려면?  */
   .desc h2{
     font-size: 1.5rem;
     padding-bottom: 0;
@@ -161,7 +162,7 @@
 
   /* 하단영역 */
   .info{
-    height: 48rem; /* 높이를 지정해줘도 안먹힘 맨 아랫부분 공간이  남아 줄이고 싶은데 어떻게 줄여야 하는지?*/
+    height: 48rem; /*빨간박스 밑에 빈 공간을 줄이고 싶을 땐?*/
   }
   .infobox{
     display: flex;
