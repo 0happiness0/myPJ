@@ -124,11 +124,11 @@
 
   /* 메인영역 */
   .cont{
-    min-height: 100vh; /* 하단 영역이 여전히 안내려감 */
-    background: url(../images/bg_main_toparea.png) no-repeat top/100% 100vh;
+    min-height: 100vh; 
+    /* background: url(../images/bg_main_toparea.png) no-repeat top/100% 80rem; */
   }
   .cbx{
-    position: static; /* static을 준 이유는? */
+    position: static;
     flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 10rem; /* static은 위치이동의 변화가 없으므로 마진으로 위치이동 시켜야함 */
@@ -143,7 +143,7 @@
     margin-top: 0;
   }
   .cha:nth-child(2)~div{
-    padding-top: 1rem;
+    padding: 1rem 0;
   }
   .banner{
     display: none;
@@ -162,7 +162,8 @@
 
   /* 하단영역 */
   .info{
-    height: 48rem; /*빨간박스 밑에 빈 공간을 줄이고 싶을 땐?*/
+    height: auto; /* 내용만큼 자동으로 늘어남 */
+    overflow: hidden; /* 맨 아래 빈공간이 많이 생겨서 부모박스 안에 숨김 */
   }
   .infobox{
     display: flex;
@@ -182,6 +183,7 @@
   .addr{
     display: block;
     margin: 2rem 2rem;
+    margin-bottom: -5rem; /* 맨 아래 빈공간이 많이 생겨서 마진으로 줄여줌? */
   }
   address{
     padding: 1rem;
@@ -189,7 +191,7 @@
   }
   .grade_box{
     display: block;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-left: 0;
   }
   .num{
