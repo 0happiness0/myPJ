@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.css">
+  <title>한솥도시락 > 로그인</title>
+</head>
+<body>
+  <!-- 상단영역 -->
+  <div id="top">
+    <header class="top inbox">
+      <ul>
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="join.html">회원가입</a></li>
+        <li>
+          <ol class="sns">
+            <li class="ir"><a href="https://www.instagram.com/hansot_shindang/" title="인스타그램 바로가기">
+                <i class="fab fa-instagram"></i>인스타그램</a>
+            </li>
+            <li class="ir"><a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank"
+                title="페이스북 바로가기">
+                <i class="fab fa-facebook-f"></i>페이스북</a>
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </header>
+  </div>
+
+  <!-- 메인영역 -->
+  <div id="login_cont">
+    <main class="login_cont inbox">
+      <div class="left_box">
+        <h2>로그인</h2>
+        <form action="process.php">
+          <label for="mid"></label>
+          <input type="text" name="mid" id="mid" placeholder="아이디" maxlength="10">
+          <label for="mpw"></label>
+          <input type="password" name="mpw" id="mpw" placeholder="비밀번호" maxlength="10">
+          <div class="id_check">
+            <input type="checkbox" name="save_login" id="save_login"><label for="save_login">아이디 저장</label>
+            <div class="find">
+              <a href="#">아이디/비밀번호 찾기</a>
+            </div>
+          </div>
+          <button class="login_btn">로그인</ㅠ>
+        </form>
+          
+      </div>
+      <div class="right_box">
+        <figure>
+          <div class="images">
+            <img src="" alt="">
+          </div>
+          <figcaption>
+            <h3>한솥 회원이 아니신가요?</h3>
+            <p>회원이 되시면 한솥 도시락의 다양한 정보와 <br> 이벤트를 만나보실 수 있습니다.</p>
+          </figcaption>
+          <button class="join_btn">회원가입</button>
+        </figure>
+      </div>
+    </main>
+  </div>
+
+  <!-- 하단영역 -->
+  <div id="info">
+    <footer class="info inbox">
+      <div class="left_bottom">
+        <ul class="notice">
+          <li><a href="#">인재채용</a>|</li>
+          <li><a href="#">협력업체등록</a>|</li>
+          <li><a href="#">공지사항</a>|</li>
+          <li><a href="#">고객 센터</a>|</li>
+          <li><a href="#">개인정보처리방침</a>|</li>
+          <li><a href="#">이용약관</a></li>
+        </ul>
+        <div class="info_line"></div>
+        <address>
+          <ul>
+            <li><a href="#">대표이사 이영덕</a></li>
+            <li><a href="#">사업자등록번호 214-81-96569</a></li>
+            <li><a href="#">서울시 강남구 강남대로 318(역삼동) 타워837빌딩 8,9층</a></li>
+            <li><a href="#">T. 02-585-1114</a></li>
+            <li><a href="#">F. 02-598-1116</a></li>
+          </ul>
+          <ol>
+            <li><a href="#">E. webmaster@hsd.co.kr</a></li>
+            <li><a href="#">한솥 도시락 고객센터 02-585-1114</a></li>
+            <li><a href="#">전국창업설명회 02-585-1114</a></li>
+            <li><a href="#">단체주문 1644-3288</a></li>
+          </ol>
+        </address>
+        <div class="copy">COPYRIGHT©㈜한솥. ALL RIGHTS RESERVED.</div>
+      </div>
+      <div class="right_bottom">
+        <div class="award">
+          <img src="images/webaward2017.png" alt="프렌차이즈 분야 대상">
+        </div>
+        <div class="bottom_sns">
+          <a href="https://www.instagram.com/hansot_shindang/" title="인스타그램 바로가기"><i class="fab fa-instagram-square"></i></a>
+          <a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="페이스북 바로가기"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

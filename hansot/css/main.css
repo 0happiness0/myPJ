@@ -5,39 +5,22 @@
 
 
 
-.gnb{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 9rem;
-}
-.gnb_list ul{
-  display: flex;
-}
-.gnb_list a{
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.6rem;
-  font-weight: bold;
-  padding: 0 3rem;
-}
-.gnb_list ul > li:hover a{
-  color: #f6ca00;
-}
 /* 메인영역 */
   .cont{
     max-width: none;
-    height: 65rem;
+    margin-bottom: 10rem;
   }
    img{
     width: 100%;
   }
   .story{
     margin-top: 10.5rem;
+    margin-bottom: 10rem;
   }
   .story h2::after{
     content: '';
     display: inline-block;
-    width: calc(117rem - 18.6rem);
+    width: calc(117rem - 17.2rem);
     height: 1.5rem;
     background-color: #373737;
     margin-bottom: 0.2rem;
@@ -48,12 +31,25 @@
   }
   .story_box ul li{
     position: relative;
+    top: 30rem;
     width: 37rem;
     height: 26.6rem;
     margin-right: 3rem;
+    opacity: 0;
+    animation: boxUp 1s forwards
+  }
+  @keyframes boxUp {
+    to{
+      top: 0;
+      opacity: 1;
+    }
+  }
+  .story_box ul li:nth-child(2){
+    animation-delay: .3s;
   }
   .story_box ul li:last-child{
     margin-right: 0;
+    animation-delay: .5s;
   }
   .story_box img{
     width: 100%;
@@ -84,20 +80,24 @@
     font-size: 1.5rem;
   }
 
-  /* section3 */
+  /* section3 브랜드 철학*/
   .brand{
     position: relative;
     width: 100%;
     height: 65rem;
     overflow: hidden;
-    transition: 3s;
   }
-  /* .brand:hover{
-    transform: scale(1.1);
-  } */
+  .brand_images{
+    height: 65rem;
+    overflow: hidden;
+  }
   .brand img{
     width: 100%;
-    height: 65rem;
+    height: 100%;
+    transition: 3s;
+  }
+  .brand:hover img{
+    transform: scale(1.1);
   }
   .btxt{
     position: absolute;
@@ -141,13 +141,16 @@
     color: #333;
   }
 
-  /* section4 */
+  /* section4 식재료 이야기 */
   .food_box{
-    height: 45rem;
     margin-top: 6rem;
   }
   .food_box a{
     display: flex;
+  }
+  .food_txt{
+    height: 45rem;
+    padding: 2.5rem 0 0 2.8rem;
   }
   .food_box img{
     position: absolute;
@@ -159,10 +162,9 @@
   .fig_txt{
     position: relative;
     width: calc(117rem - 79.8rem);
-    height: 45rem;
+    /* height: 45rem; */
     background-color: #ddd;
     color: #333;
-    padding: 3.8rem 0 0 2.8rem;
   }
   .fig_txt .normal_txt{
     color: #333;
@@ -174,13 +176,16 @@
   .fig_txt p{
     font-size: 1.6rem;
   }
+  .food_txt .arrow_btn{
+    margin-top: 4.5rem;
+  }
   .food_box:hover .food_btn::before,
   .food_box:hover .food_btn::after{
     color: #f2c000;
   }
   
 
-  /* section5 */
+  /* section5 가맹점 */
   .branch_box ul{
     display: flex;
   }
@@ -213,9 +218,9 @@
   }
   .branch_box1 figcaption{
     position: relative;
-    height: 17.5rem;
+    height: 21rem;
     background-color: #ddd;
-    padding-top: 2.5rem;
+    padding: 2.5rem 0 0 2.8rem;
   }
   .branch_box1 figcaption b{
     font-size: 2.4rem;

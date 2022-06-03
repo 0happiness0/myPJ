@@ -125,7 +125,6 @@
   /* 메인영역 */
   .cont{
     min-height: 100vh; 
-    /* background: url(../images/bg_main_toparea.png) no-repeat top/100% 80rem; */
   }
   .cbx{
     position: static;

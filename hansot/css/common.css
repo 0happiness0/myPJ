@@ -21,16 +21,81 @@ h2{
 .top{
   height: 3rem;
 }
-.top ul{
+.top > ul{
   display: flex;
   justify-content: flex-end;
 }
-.top a{
+.top ul > li > a{
   font-size: 1.1rem;
   padding: 0 1.4rem;
 }
 .sns{
   display: flex;
+}
+
+/* GNB메뉴 */
+.gnb{
+  position: sticky;
+  top: 2.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+}
+.gnb_list > ul{
+  display: flex;
+}
+.gnb_list > ul > li{
+  position: relative;
+}
+.gnb_list > ul > li > a{
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 3.3rem;
+}
+.gnb_list > ul > li > a::after{
+  content: '';
+  display: none;
+  position: absolute;
+  bottom: -0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.5rem;
+  height: 0.6rem;
+  background-color: #f6ca00;
+}
+.gnb_list > ul > li:hover > a{
+  color: #f6ca00;
+}
+.gnb_list > ul > li:hover > a::after{
+  display: block;
+}
+
+/* 서브메뉴 */
+.smenu{
+  position: absolute;
+  top: 5.5rem;
+}
+.smenu > ol{
+  text-align: center;
+}
+.smenu > ol > li{
+  width: 10.8rem;
+  height: 4.2rem;
+}
+.smenu > ol > li > a{
+  display: inline-block;
+  font-size: 1.3rem;
+  padding: .9em .5rem;
+  color: #666;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: normal;
+}
+.smenu > ol > li:hover > a{
+  border-bottom: 1px solid #000;
+  
 }
 
 /* 메인영역 */
@@ -52,14 +117,14 @@ h2{
 .fig_txt::after{
   content: '';
   position: absolute;
-  bottom: -0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: .6rem;
   background-color: #333;
 }
 .fig_txt .arrow_btn{
-  margin-top: 4rem;
+  margin-top: 5em;
   font-size: 1.5rem;
   transition: .3s ease;
 }
@@ -70,27 +135,62 @@ h2{
 /* 하단영역 */
 #info{
   width: 100%;
-  height: 31rem;
+  height: 25rem;
   background-color: #f2c000;
+}
+.info{
+  display: flex;
+  position: relative;
 }
 .notice{
   display: flex;
+  margin-top: 4.5rem;
 }
 .notice a{
   padding: 0 1.3rem;
   font-size: 1.6rem;
   color: #333;
 }
+.notice li:first-child a{
+  padding-left: 0;
+}
+.info_line{
+  border-top: .1rem solid #999;
+  opacity: .3;
+  margin: 2rem 0;
+}
 address{
   font-style: normal;
 }
 address ul, address ol{
   display: flex;
+  line-height: 1.8;
 }
-address a{
+address a, .copy{
   font-size: 1.5rem;
   color: #333;
+  padding: 0 .5rem;
+}
+address li:first-child a{
+  padding-left: 0;
 }
 .copy{
-  text-align: center;
+  line-height: 4;
+}
+
+/* right_bottom */
+.award{
+  position: absolute;
+  top: 3rem;
+  right: 0;
+}
+.bottom_sns{
+  position: absolute;
+  top: 12rem;
+  right: 3.5rem;
+}
+.bottom_sns i{
+  font-size: 4rem;
+  color: #333;
+  margin-left: 1rem;
 }
