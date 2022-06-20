@@ -1,0 +1,268 @@
+@charset "utf-8";
+
+@import url(reset.css);
+@import url(common.css);
+
+
+/* 메인영역 */
+  .cont{
+    max-width: none;
+    margin-top: 65rem;
+    margin-bottom: 10rem;
+  }
+  .slide_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+  }
+  .slide_bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .story{
+    padding-top: 10.5rem; /* margin이 안먹히는 이유 */
+    margin-bottom: 10rem;
+  }
+  .story h2::after{
+    content: '';
+    display: inline-block;
+    width: calc(117rem - 17.2rem);
+    height: 1.5rem;
+    background-color: #373737;
+    margin-bottom: 0.2rem;
+    margin-left: 2.5rem;
+  }
+  .story_box ul{
+    display: flex;
+  }
+  .story_box ul li{
+    position: relative;
+    top: 30rem;
+    width: 37rem;
+    height: 26.6rem;
+    margin-right: 3rem;
+    opacity: 0;
+    animation: boxUp 1s forwards
+  }
+  @keyframes boxUp {
+    to{
+      top: 0;
+      opacity: 1;
+    }
+  }
+  .story_box ul li:nth-child(2){
+    animation-delay: .3s;
+  }
+  .story_box ul li:last-child{
+    margin-right: 0;
+    animation-delay: .5s;
+  }
+  .story_box img{
+    width: 100%;
+    height: 20.5rem;
+  }
+  .stxt{
+    position: absolute;
+    bottom: .2rem;
+    width: 100%;
+    height: 6rem;
+    background-color: #333;
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 6rem;
+    padding-left: 2.8rem;
+  }
+  .story_box li:hover .stxt{
+    color: #f6ca00;
+  }
+  .stxt::after{
+    content: '\f105';
+    font-family: fontawesome;
+    position: absolute;
+    top: 0;
+    right: 2rem;
+  }
+  .stxt a{
+    font-size: 1.5rem;
+  }
+
+  /* section3 브랜드 철학*/
+  .brand{
+    position: relative;
+    width: 100%;
+    height: 65rem;
+    overflow: hidden;
+  }
+  .brand_images{
+    height: 65rem;
+    overflow: hidden;
+  }
+  .brand img{
+    width: 100%;
+    height: 100%;
+    transition: 3s;
+  }
+  .brand:hover img{
+    transform: scale(1.1);
+  }
+  .btxt{
+    position: absolute;
+    top: 0;
+    right: 17.3rem;
+    width: 37rem;
+    height: 100%;
+    padding: 8.6rem 0 0 2.6rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+  }
+  .bold_txt{
+    font-size: 3.6rem;
+  }
+  .brand .line{
+    background-color: #fff;
+  }
+  .normal_txt{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    letter-spacing: -0.05rem;
+    color: #dadada;
+  }
+  .brand_btn{
+    margin-top: 12.5rem;
+    width: 16.5rem;
+    height: 5.5rem;
+    border: 2px solid #fff;
+    text-align: center;
+    line-height: 5.5rem;
+    transition: .3s ease-in-out;
+  }
+  .brand_btn a{
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .brand_btn:hover{
+    background-color: #fff;
+  }
+  .brand_btn:hover a{
+    color: #333;
+  }
+
+  /* section4 식재료 이야기 */
+  .food_box{
+    position: relative;
+    width: 100%;
+    margin-top: 6rem;
+    background-color: #ddd;
+  }
+  .food_txt figcaption{
+    position: relative;
+    width: 37rem;
+    height: 100%;
+    padding: 2.5rem 2.8rem 0;
+  }
+  .food_txt figcaption::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.6rem;
+    background-color: #333;
+  }
+  .food_txt{
+    width: 100%;
+    height: 45rem;
+  }
+  .food_txt .images{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 80rem;
+    color: #333;
+  }
+  .food_txt .normal_txt{
+    color: #333;
+  }
+  .line{
+    margin: 3.5rem 0 2rem;
+    background-color: #333;
+  }
+  .food_txt p{
+    font-size: 1.6rem;
+  }
+  .food_txt .arrow_btn{
+    margin-top: 4.5rem;
+  }
+  .food_box:hover .food_btn::before,
+  .food_box:hover .food_btn::after{
+    color: #f2c000;
+  }
+
+  /* section5 가맹점 */
+  .branch_box ul{
+    display: flex;
+    margin-top: 6rem;
+  }
+  .branch_box1{
+    width: 37rem;
+    height: 44rem;
+    margin-right: 3rem;
+    padding: 4.5rem 0 0 3rem;
+  }
+  .branch_box li:first-child{
+    background-color: #f6ca00;
+  }
+  .branch_box li:last-child{
+    margin-right: 0;
+  }
+  .branch_box .normal_txt{
+    color: #333;
+  }
+  .branch_box1:not(:first-child){
+    padding: 0;
+  }
+  .branch_box1 figure .images{
+    width: 100%;
+    height: 23rem;
+    margin-right: 3rem;
+  }
+  .branch_box1 .images img{
+    width: 100%;
+    height: 100%;
+  }
+  .branch_box1 figcaption{
+    position: relative;
+    height: 21rem;
+    background-color: #ddd;
+    padding: 2.5rem 0 0 2.8rem;
+  }
+  .branch_box1 figcaption::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: .1rem;
+    left: 0;
+    width: 100%;
+    height: 0.6rem;
+    background-color: #333;
+  }
+  .branch_box1 figcaption b{
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: bold;
+    word-spacing: -0.40rem;
+  }
+  .branch_box1 figcaption{
+    position: relative;
+  }
+  .branch_box1 figcaption .arrow_btn{
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1.3rem;
+  }
+

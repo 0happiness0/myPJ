@@ -8,12 +8,12 @@
 }
 .login_cont{
   display: flex;
-  margin-bottom: 10rem;
+  padding-bottom: 10rem;
 }
 .left_box{
   position: relative;
-  width: 67rem;
-  height: 56rem;
+  width: 60%;
+  max-height: 56rem;
   border-top: .6rem solid #f6ca00;
   background-color: #fff;
   margin-right: 2.8rem;
@@ -47,9 +47,15 @@
 .left_box input[type=password]{
   margin-top: 2rem;
 }
+
+.save_id{
+  float: left;
+}
 .id_check{
-  display: flex;
-  margin: 1.8rem 0 8.2rem;
+  width: 47.3rem;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 1.6rem;
 }
 .login_btn{
   width: 47.3rem;
@@ -59,10 +65,14 @@
   font-size: 1.5rem;
   font-weight: bold;
   border: none;
+  margin-top: 7.3rem;
 }
 label[for=save_login], .find a{
   font-size: 1.5rem;
   color: #373737;
+}
+.find{
+  float: right;
 }
 .find a::before{
   content: '';
@@ -70,21 +80,33 @@ label[for=save_login], .find a{
   width: 1.5rem;
   height: 1.5rem;
   background: url(/images/icon_search.png) no-repeat 0/cover;
-  margin-right: .8rem;
+  margin-right: .5rem;
   vertical-align: middle;
+  transition: .3s;
+}
+.find a:hover::before{
+  background: url(/images/icon_search_hover.png) no-repeat 0/cover; 
+  margin-top: -0.3rem;
+}
+.find a:hover{
+  display: inline-block;
+  color: #f2c000;
+  border-bottom: 2px solid #f2c000;
 }
 
+/* 회원가입 */
 .right_box{
-  width: calc(117rem - 67rem);
-  height: 56rem;
-  border: 1px solid #000;
+  width: 40%;
+  max-height: 56rem;
   background-color: #fff;
 }
 .right_box figcaption{
   text-align: center;
+  margin-top: 6.3rem;
 }
 .right_box figcaption h3{
   font-size: 2.4rem;
+  font-weight: normal;
 }
 .right_box figcaption p{
   font-size: 1.5rem;

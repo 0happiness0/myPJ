@@ -1,0 +1,367 @@
+@media screen and (max-width:1023px) {
+  
+  /* 하단영역 */
+  .info{
+    margin-top: 6rem;
+    position: relative;
+    min-height: 25rem;
+  }
+  .notice li:nth-child(1), .notice li:nth-child(2){
+    display: none;
+  }
+  .info_line, address ul, address ol{
+    display: none;
+  }
+  .ceo_info{
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    border-top: 1px solid #dfb206;
+    border-bottom: 1px solid #dfb206;
+    padding: 1.5rem 0;
+  }
+  .copy{
+    margin-top: 8rem;
+  }
+  .award{
+    top: -12rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+
+@media screen and (max-width:800px){
+  /* 상단영역 */
+  .gnb{
+    display: inline-block;
+    width: 100%;
+    height: 6rem;
+  }
+  .gnb_list{
+    display: none;
+  }
+  .top_logo{
+    float: left;
+    width: 7rem;
+    margin-left: 0;
+  }
+  .top_logo img{
+    width: 100%;
+  }
+  .ham{
+    display: block;
+    position: absolute;
+    top: 36%;
+    right: 4.5rem;
+    transform: translateX(-50%) scale(3);
+  }
+
+    /************ index ************/
+    .cont{
+      margin-bottom: 0;
+    }
+    .story h2.title{
+      display: none;
+    }
+    .story_box ul{
+      display: block;
+    }
+    .story_box ul li{
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
+    .story_box ul li:last-child{
+      margin-right: 2rem;
+    }
+    /* 브랜드 철학 */
+    .brand::after{
+    right: 50%;
+    transform: translateX(50%);
+    width: 80%;
+    height: 100%;
+    }
+    .btxt{
+      height: 48rem;
+      padding: 4.6rem 0 0 0;
+    }
+    .brand_images{
+      height: 60rem;
+    }
+    .bold_txt{
+      font-size: 2.8rem;
+    }
+
+    /* 식재료 이야기 */
+    .food_txt.fig_txt{
+      height: 38rem;
+    }
+    .food_box img{
+      left: 0;
+    }
+    /* .food_txt figcaption{
+    float: none;
+    max-width: 80rem;
+    }
+    .food_txt .images{
+    float: none;
+    } */
+    .normal_txt{
+      line-height: 1.5;
+    }
+
+    /* 가맹점주  */
+    /* .branch_box ul{
+      display: block;
+    } */
+    /* .branch_box1{
+      width: 100%;
+      height: 40rem;
+    } */
+    /* .branch_box1:not(:first-child){
+      width: 100%;
+      padding: 0 1.5rem;
+    }
+    .branch_box1:nth-child(2){
+      margin-top: -10rem;
+    }
+    .branch_box1:nth-child(3){
+      margin-top: -4rem;
+    } */
+    .branch_box1 figcaption{
+      height: 15rem;
+    }
+    .branch_box1 figcaption b{
+      font-size: 1.8rem;
+      font-weight: normal;
+    }
+    .branch_box1 .bold_txt{
+    font-size: 2.5rem;
+    }
+    .branch_box1 figcaption b{
+      font-size: 1.8rem;
+    }
+    .fig_txt{
+      width: 100%;
+    }
+    .fig_txt .arrow_btn{
+      margin-top: 2rem;
+      font-size: 1.3rem;
+    }
+
+  /************ login ************/
+  .top > ul{
+    display: none;
+  }
+  .login_cont{
+    display: block;
+    padding-bottom: 6rem;
+  }
+  .left_box{
+    width: 100%;
+    margin-right: 0;
+    border-top: none;
+    padding: 3.5rem 1.5rem;
+  }
+  .left_box h2{
+    font-size: 2.4rem;
+    text-align-last: left;
+    margin: 0 0 2.5rem 3rem;
+  }
+  .left_box h2::before{
+    top: 4rem;
+    left: 1.5rem;
+    width: 2rem;
+    height: 2.4rem;
+  }
+  .left_box input[type=text], .left_box input[type=password]{
+    width: 100%;
+  }
+  .find{
+    float: left;
+    width: 50%;
+    text-align: right;
+  }
+  .login_btn{
+    width: 100%;
+    height: 5rem;
+    margin-top: 6rem;
+  }
+  .right_box{
+    width: 100%;
+    padding: 0 1.5rem 2rem;
+  }
+  .right_box figcaption{
+    margin-top: 0;
+    border-top: 1px solid #eeecec;
+  }
+  .right_box .images, .right_box figcaption p{
+    display: none;
+  }
+  .right_box figcaption h3{
+    font-size: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  .join_btn{
+    width: 100%;
+    height: 5rem;
+    margin: 0;
+  }
+
+  /************ join ************/
+  #join{
+    padding-bottom: 6rem;
+  }
+  .join > h2{
+    text-align: center;
+    padding: 0;
+    font-size: 2.4rem;
+  }
+  .agree_title{
+    display: block;
+    padding: 0;
+  }
+  .agree_title::before{
+    width: 13rem;
+    height: 0.15rem;
+  }
+  .left_box{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .left_box b{
+    font-size: 3.6rem;
+    font-weight: normal;
+  }
+  .left_box > span{
+    font-size: 2rem;
+  }
+  .left_box > p{
+    margin-top: 3rem;
+  }
+  .right_box{
+    width: 100%;
+    margin-top: 0;
+  }
+  .right_box h3{
+    margin-top: 4rem;
+    font-size: 1.8rem;
+  }
+  .right_box h3::before{
+    height: 2rem;
+    margin-right: 1rem;
+  }
+  .txt_box{
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .all_agree{
+    margin-top: 5rem;
+  }
+  #all_agree{
+    font-size: 1.5rem;
+  }
+  .next_btn{
+    width: 100%;
+    height: 5rem;
+    margin-top: 2rem;
+    line-height: 5rem;
+  }
+
+}
+
+@media screen and (max-width:620px){
+  .ad_banner{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  .slide_bg{
+    width: 100%;
+    height: 38rem;
+  }
+  .slide{
+    width: 100%;
+    height: 100%;
+  }
+  .slide li img{
+    object-fit: cover;
+  }
+  
+  .story{
+    padding-top: 44rem;
+  }
+  .brand_box{
+    margin-top: 4rem;
+  }
+  .brand img{
+    object-fit: cover;
+  }
+  .btxt{
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 6rem 2rem 6rem;
+  }
+  .btxt::before{
+    width: 100%;
+    height: 100%;
+  }
+  .brand_btn{
+    margin-top: 10rem;
+  }
+
+  .food{
+    padding: 0 1.5rem;
+  }
+  .food_txt .images{
+    width: auto;
+    height: auto;
+  }
+
+  .food_txt figcaption{
+    width: auto;
+    height: auto;
+    border-bottom: 0;
+  }
+
+
+  .branch_txt{
+    margin-right: 0;
+  }
+  .branch_wrap1{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .branch_wrap1 li:first-child{
+    margin-top: -10rem;
+    margin-right: 0;
+  }
+  .branch_wrap1 li:last-child{
+    margin-top: 2rem;
+  }
+  .branch_cont figcaption{
+    height: 15rem;
+  }
+  .branch_cont figcaption b{
+    font-size: 1.8rem;
+    word-spacing: 0;
+  }
+  .branch_cont figcaption .arrow_btn{
+    bottom: 3rem;
+  }
+
+
+   /* top버튼 */
+   .tbtn, .fi.fi-angle-up{
+    display: none;
+    }
+  
+}

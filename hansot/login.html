@@ -5,27 +5,86 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="/css/mobile.css">
   <title>한솥도시락 > 로그인</title>
 </head>
 <body>
-  <!-- 상단영역 -->
-  <div id="top">
+   <!-- 상단영역 -->
+   <div id="top">
     <header class="top inbox">
       <ul>
         <li><a href="login.html">로그인</a></li>
         <li><a href="join.html">회원가입</a></li>
         <li>
           <ol class="sns">
-            <li class="ir"><a href="https://www.instagram.com/hansot_shindang/" title="인스타그램 바로가기">
-                <i class="fab fa-instagram"></i>인스타그램</a>
+            <li><a href="https://www.instagram.com/hansot_shindang/" title="인스타그램 바로가기">
+                <i class="fab fa-instagram"></i></a>
             </li>
-            <li class="ir"><a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank"
-                title="페이스북 바로가기">
-                <i class="fab fa-facebook-f"></i>페이스북</a>
+            <li><a href="https://www.facebook.com/hansotOfficial/?ref=ts&fref=ts" target="_blank" title="페이스북 바로가기">
+                <i class="fab fa-facebook-f"></i></a>
             </li>
           </ol>
         </li>
       </ul>
+      <!-- GNB메뉴 -->
+      <div class="gnb inbox">
+        <h1 class="top_logo"><a href="#"><img src="images/h1_logo.png" alt="상단한솥로고"></a></h1>
+        <nav class="gnb_list">
+          <ul>
+            <li><a href="#">BRAND</a>
+              <div class="smenu">
+                <ol>
+                  <li><a href="#">브랜드 스토리</a></li>
+                  <li><a href="#">브랜드 철학</a></li>
+                  <li><a href="#">브랜드 유산</a></li>
+                  <li><a href="#">ESG경영</a></li>
+                  <li><a href="#">세계 40대 브랜드 선정</a></li>
+                </ol>
+              </div>
+            </li>
+            <li><a href="#">MENU</a>
+              <div class="smenu">
+                <ol>
+                  <li><a href="#">전체메뉴</a></li>
+                  <li><a href="#">식재료 이야기</a></li>
+                  <li><a href="#">단체주문</a></li>
+                </ol>
+              </div>
+            </li>
+            <li><a href="#">STORE</a>
+              <div class="smenu">
+                <ol>
+                  <li><a href="#">주변점포찾기</a></li>
+                </ol>
+              </div>
+            </li>
+            <li><a href="#">EVENT</a>
+              <div class="smenu">
+                <ol>
+                  <li><a href="#">이 달의 이벤트</a></li>
+                  <li><a href="#">신규점 오픈이벤트</a></li>
+                </ol>
+              </div>
+            </li>
+            <li><a href="#">HANSOT</a>
+              <div class="smenu">
+                <ol>
+                  <li><a href="#">한솥의 약속</a></li>
+                  <li><a href="#">한솥의 비전</a></li>
+                  <li><a href="#">한솥 NEWS</a></li>
+                  <li><a href="#">오시는 길</a></li>
+                  <li><a href="#">고객센터</a></li>
+                  <li><a href="#">인재채용</a></li>
+                </ol>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="ham">
+        <i class="fas fa-bars"></i>
+      </div>
+
     </header>
   </div>
 
@@ -33,33 +92,35 @@
   <div id="login_cont">
     <main class="login_cont inbox">
       <div class="left_box">
-        <h2>로그인</h2>
+        <h2 class="title">로그인</h2>
         <form action="process.php">
           <label for="mid"></label>
           <input type="text" name="mid" id="mid" placeholder="아이디" maxlength="10">
           <label for="mpw"></label>
           <input type="password" name="mpw" id="mpw" placeholder="비밀번호" maxlength="10">
           <div class="id_check">
-            <input type="checkbox" name="save_login" id="save_login"><label for="save_login">아이디 저장</label>
+            <div class="save_id">
+              <input type="checkbox" name="save_login" id="save_login"><label for="save_login"><span></span> 아이디 저장</label>
+            </div>
             <div class="find">
               <a href="#">아이디/비밀번호 찾기</a>
             </div>
           </div>
-          <button class="login_btn">로그인</ㅠ>
+          <button class="login_btn">로그인</button>
         </form>
           
       </div>
       <div class="right_box">
         <figure>
           <div class="images">
-            <img src="" alt="">
+            <img src="images/join_temp_01.jpg" alt="회원가입 이미지">
           </div>
           <figcaption>
             <h3>한솥 회원이 아니신가요?</h3>
             <p>회원이 되시면 한솥 도시락의 다양한 정보와 <br> 이벤트를 만나보실 수 있습니다.</p>
           </figcaption>
-          <button class="join_btn">회원가입</button>
         </figure>
+        <button class="join_btn">회원가입</button>
       </div>
     </main>
   </div>
@@ -78,6 +139,7 @@
         </ul>
         <div class="info_line"></div>
         <address>
+          <div class="ceo_info">한솥 사업자 정보</div>
           <ul>
             <li><a href="#">대표이사 이영덕</a></li>
             <li><a href="#">사업자등록번호 214-81-96569</a></li>

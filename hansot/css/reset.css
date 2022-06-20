@@ -24,3 +24,7 @@ a{
 input:focus{
   outline: none;
 }
+button, input[type=checkbox] + label{
+  cursor: pointer;
+}
+
