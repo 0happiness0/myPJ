@@ -6,19 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>한솥도시락</title>
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/mobile.css">
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/mobile.css">
   <!-- awesome CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <!-- 폰티스토 아이콘 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="/js.js"></script>
+  <!-- slick -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 
 </head>
 
 <body>
   <!-- 상단영역 -->
-  <div id="top" class="on">
+  <div id="top">
     <header class="top inbox">
       <ul>
         <li><a href="login.html">로그인</a></li>
@@ -36,9 +44,8 @@
       </ul>
       <!-- GNB메뉴 -->
       <div class="gnb inbox">
-        <h1 class="top_log ir">상단로고<a href="#">
-          <!-- <img src="/images/h1_logo.png" alt="상단로고"> -->
-        </a></h1>
+        <h1 class="top_log"><a href="#">
+        </a><span class="ir">상단로고</span></h1>
         <nav class="gnb_list">
           <ul>
             <li><a href="#">BRAND</a>
@@ -76,37 +83,24 @@
                 </ol>
               </div>
             </li>
-            <li><a href="#">HANSOT</a>
+            <li><a href="#none">HANSOT</a>
               <div class="smenu">
                 <ol>
-                  <li><a href="#">한솥의 약속</a></li>
-                  <li><a href="#">한솥의 비전</a></li>
-                  <li><a href="#">한솥 NEWS</a></li>
-                  <li><a href="#">오시는 길</a></li>
-                  <li><a href="#">고객센터</a></li>
-                  <li><a href="#">인재채용</a></li>
+                  <li><a href="#none">한솥의 약속</a></li>
+                  <li><a href="#none">한솥의 비전</a></li>
+                  <li><a href="#none">한솥 NEWS</a></li>
+                  <li><a href="#none">오시는 길</a></li>
+                  <li><a href="#none">고객센터</a></li>
+                  <li><a href="#none">인재채용</a></li>
                 </ol>
               </div>
             </li>
           </ul>
         </nav>
       </div>
-      <div class="ham">
-        <i class="fas fa-bars"></i>
-      </div>
-
+      <!-- 햄버거 버튼 -->
+      <div class="ham" onclick="showGnb()"></div>
     </header>
-  </div>
-
-  <!-- 광고배너 -->
-  <div class="ad_banner">
-    <div class="images">
-      <a href="#"><img src="/images/c82960f988bb4c31aa1d89c416ccd52920220608070729.jpg" alt="열무야채 비빔밥 광고"></a>
-    </div>
-    <div class="ad_banner_btn">
-      <span class="ad_btn btn_left"><a href="#">하루동안 보지 않기</a></span>
-      <span class="ad_btn btn_right"><a href="#">닫기</a></span>
-    </div>
   </div>
 
   <!-- 메인영역 -->
@@ -129,8 +123,8 @@
           </li>
         </ul>
         <!-- 이동버튼 -->
-        <a href="#" class="abtn ab1"><i class="fas fa-angle-left"></i></a>
-        <a href="#" class="abtn ab2"><i class="fas fa-angle-right"></i></a>
+        <a href="#none" class="abtn ab1"><i class="fas fa-angle-left"></i></a>
+        <a href="#none" class="abtn ab2"><i class="fas fa-angle-right"></i></a>
         <!-- 블릿버튼 -->
         <div class="indic">
           <div class="bullets">
@@ -155,14 +149,14 @@
         <div class="story_box">
           <ul>
             <li>
-              <a href="#" class="link_a"></a>
+              <a href="#none" class="link_a"></a>
                 <figure>
                   <img src="images/more_news.jpg" alt="한솥뉴스">
                   <figcaption class="stxt">한솥뉴스</figcaption>
                 </figure>
             </li>
             <li>
-              <a href="#">
+              <a href="#none">
                 <figure>
                   <img src="images/more_event.jpg" alt="이벤트">
                   <figcaption class="stxt">한솥 이벤트</figcaption>
@@ -170,11 +164,12 @@
               </a>
             </li>
             <li>
-              <a href="#" class="link_a"></a>
+              <a href="#none">
                 <figure>
                   <img src="images/main_img_02.jpg" alt="한솥매장">
                   <figcaption class="stxt">가까운 한솥매장</figcaption>
                 </figure>
+              </a>
             </li>
           </ul>
         </div>
@@ -242,7 +237,7 @@
                 상담부터 개업까지 모든 희로애락을 함께 합니다.</p>
             </div>
             <ul class="branch_wrap1">
-              <li class="branch_cont"><a href="#" class="link_a"></a>
+              <li class="branch_cont"><a href="#none">
                     <figure class="branch_txt fig_txt">
                       <div class="images"><img src="images/main_img_03.jpg" alt="한솥 가맹점 이미지"></div>
                       <figcaption>
@@ -253,10 +248,10 @@
                         <div class="arrow_btn">Why 한솥 가맹점</div>
                       </figcaption>
                     </figure>
+                  </a>
               </li>
               <li class="branch_cont">
-                <a href="#" class="link_a"></a>
-                  <div>
+                <a href="#none">
                     <figure class="branch_txt fig_txt">
                       <div class="images"><img src="images/main_img_04.jpg" alt="성공수기 이미지"></div>
                       <figcaption>
@@ -266,7 +261,7 @@
                         <div class="arrow_btn">성공수기</div>
                       </figcaption>
                     </figure>
-                  </div>
+                </a>
               </li>
             </ul>
         </div>
@@ -279,28 +274,28 @@
     <footer class="info inbox">
       <div class="left_bottom">
         <ul class="notice">
-          <li><a href="#">인재채용</a></li>
-          <li><a href="#">협력업체등록</a></li>
-          <li><a href="#">공지사항</a></li>
-          <li><a href="#">고객 센터</a></li>
-          <li><a href="#">개인정보처리방침</a></li>
-          <li><a href="#">이용약관</a></li>
+          <li><a href="#none">인재채용</a></li>
+          <li><a href="#none">협력업체등록</a></li>
+          <li><a href="#none">공지사항</a></li>
+          <li><a href="#none">고객 센터</a></li>
+          <li><a href="#none" class="privacy">개인정보처리방침</a></li>
+          <li><a href="#none">이용약관</a></li>
         </ul>
         <div class="info_line"></div>
         <address>
           <div class="ceo_info">한솥 사업자 정보</div>
           <ul>
-            <li><a href="#">대표이사 이영덕</a></li>
-            <li><a href="#">사업자등록번호 214-81-96569</a></li>
-            <li><a href="#">서울시 강남구 강남대로 318(역삼동) 타워837빌딩 8,9층</a></li>
-            <li><a href="#">T. 02-585-1114</a></li>
-            <li><a href="#">F. 02-598-1116</a></li>
+            <li><a href="#none">대표이사 이영덕</a></li>
+            <li><a href="#none">사업자등록번호 214-81-96569</a></li>
+            <li><a href="#none">서울시 강남구 강남대로 318(역삼동) 타워837빌딩 8,9층</a></li>
+            <li><a href="#none">T. 02-585-1114</a></li>
+            <li><a href="#none">F. 02-598-1116</a></li>
           </ul>
           <ol>
-            <li><a href="#">E. webmaster@hsd.co.kr</a></li>
-            <li><a href="#">한솥 도시락 고객센터 02-585-1114</a></li>
-            <li><a href="#">전국창업설명회 02-585-1114</a></li>
-            <li><a href="#">단체주문 1644-3288</a></li>
+            <li><a href="#none">E. webmaster@hsd.co.kr</a></li>
+            <li><a href="#none">한솥 도시락 고객센터 02-585-1114</a></li>
+            <li><a href="#none">전국창업설명회 02-585-1114</a></li>
+            <li><a href="#none">단체주문 1644-3288</a></li>
           </ol>
         </address>
         <div class="bottom_sns">
@@ -319,7 +314,19 @@
     </footer>
   </div>
 
-  
+  <!-- 광고배너 -->
+  <div class="ad_banner_bg"></div>
+  <div class="ad_banner">
+    <div class="images">
+      <a href="#none"><img src="/images/c82960f988bb4c31aa1d89c416ccd52920220608070729.jpg" alt="열무야채 비빔밥 광고"></a>
+    </div>
+    <div class="ad_banner_btn">
+      <span class="ad_btn notToday"><a href="#none">하루동안 보지 않기</a></span>
+      <span class="ad_btn btn_close" onclick="popupClose()"><a href="#none">닫기</a></span>
+    </div>
+    <div class="popupbg">
+    </div>
+  </div>
 
   <!-- 위로가기버튼 -->
   <a href="#" class="tbtn fi fi-angle-up">

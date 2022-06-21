@@ -34,34 +34,136 @@
 
 @media screen and (max-width:800px){
   /* 상단영역 */
-  .gnb{
-    display: inline-block;
-    width: 100%;
-    height: 6rem;
-  }
-  .gnb_list{
+  .ad_banner{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
   }
-  .top_logo{
-    float: left;
-    width: 7rem;
-    margin-left: 0;
+
+  #top.on .top{
+    display: none;
   }
-  .top_logo img{
-    width: 100%;
+  .top > ul > li:last-child{
+    display: none;
+  }
+  .top > ul > li > a{
+    position: absolute;
+    top: 1rem;
+    left: 20%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.8rem;
+    padding-left: 0;
+    z-index: 5;
+  }
+
+  .top_log > a{
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.6rem;
+    background: url(../images/m_h1_logo.png) no-repeat 0/cover;
+    margin-left: 2rem;
+  }
+  .gnb_list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.8);
+  }
+  .gnb_list ul{
+    display: block;
+    position: absolute;
+    top: 10rem;
+    left: 20%;
+    transform: translateX(-50%);
+    text-align: left;
+  }
+  .gnb_list ul li a{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* 햄버거 버튼 */
+  .gnb_list{
+    display: none; 
   }
   .ham{
     display: block;
-    position: absolute;
-    top: 36%;
-    right: 4.5rem;
-    transform: translateX(-50%) scale(3);
   }
+  .top.on .ham{
+    position: absolute;
+    top: .5rem;
+    right: 5rem;
+    color: #fff;
+    z-index: 3;
+  }
+  .top.on .ham::before{
+    content: '\f00d';
+    position: absolute;
+    top: .7rem;
+    font-family: fontawesome;
+    font-size: 4rem;
+    color: #fff;
+  }
+  .top.on .gnb_list{
+    display: block;
+  }
+  .gnb_list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.8);
+    z-index: 3;
+  }
+  .gnb_list ul{
+    display: block;
+    position: absolute;
+    top: 10rem;
+    left: 20%;
+    transform: translateX(-50%);
+    text-align: left;
+  }
+  .gnb_list > ul > li > a{
+    font-size: 2.5rem;
+    line-height: 6rem;
+    color: #fff;
+  }
+  .gnb_list::after{ /* 서브메뉴 배경 */
+    display: none;
+  }
+  
+  /* 서브메뉴 */
+  .smenu{
+    position: static;
+    top: 5rem;
+    left: 0;
+    text-align: left;
+  }
+  .smenu a{
+    font-size: 1.6rem;
+    line-height: 4rem;
+    color: #000;
+  }
+  .smenu ol{
+    background-color: #eeecec;
+  }
+  .smenu > ol > li > a{
+    color: #666;
+    line-height: 6rem;
+    text-align: left;
+  }
+  
 
     /************ index ************/
-    .cont{
-      margin-bottom: 0;
-    }
+
     .story h2.title{
       display: none;
     }
@@ -101,35 +203,11 @@
     .food_box img{
       left: 0;
     }
-    /* .food_txt figcaption{
-    float: none;
-    max-width: 80rem;
-    }
-    .food_txt .images{
-    float: none;
-    } */
     .normal_txt{
       line-height: 1.5;
     }
 
     /* 가맹점주  */
-    /* .branch_box ul{
-      display: block;
-    } */
-    /* .branch_box1{
-      width: 100%;
-      height: 40rem;
-    } */
-    /* .branch_box1:not(:first-child){
-      width: 100%;
-      padding: 0 1.5rem;
-    }
-    .branch_box1:nth-child(2){
-      margin-top: -10rem;
-    }
-    .branch_box1:nth-child(3){
-      margin-top: -4rem;
-    } */
     .branch_box1 figcaption{
       height: 15rem;
     }
@@ -157,27 +235,36 @@
   }
   .login_cont{
     display: block;
+    padding-top: 0;
     padding-bottom: 6rem;
   }
-  .left_box{
+  .login_box{
+    display: block;
+  }
+  .login_cont .left_box{
     width: 100%;
+    min-height: 0;
     margin-right: 0;
     border-top: none;
     padding: 3.5rem 1.5rem;
   }
-  .left_box h2{
+  .login_cont .left_box h2{
     font-size: 2.4rem;
     text-align-last: left;
     margin: 0 0 2.5rem 3rem;
   }
-  .left_box h2::before{
+  .login_cont .left_box h2::before{
     top: 4rem;
     left: 1.5rem;
     width: 2rem;
     height: 2.4rem;
   }
-  .left_box input[type=text], .left_box input[type=password]{
+  .login_cont .left_box input[type=text], .left_box input[type=password]{
     width: 100%;
+  }
+  .save_id{
+    width: 50%;
+    text-align: left;
   }
   .find{
     float: left;
@@ -216,21 +303,23 @@
   }
   .join > h2{
     text-align: center;
-    padding: 0;
+    padding: 3.7rem 0 0;
     font-size: 2.4rem;
+    font-weight: bold;
   }
   .agree_title{
     display: block;
     padding: 0;
   }
   .agree_title::before{
+    top: -0.1rem;
     width: 13rem;
-    height: 0.15rem;
+    height: 0.25rem;
   }
   .left_box{
     width: 100%;
     text-align: center;
-    padding-bottom: 1rem;
+    padding: 2.5rem 0 1rem;
   }
   .left_box b{
     font-size: 3.6rem;
@@ -247,7 +336,7 @@
     margin-top: 0;
   }
   .right_box h3{
-    margin-top: 4rem;
+    margin-top: 3rem;
     font-size: 1.8rem;
   }
   .right_box h3::before{
@@ -274,11 +363,22 @@
 }
 
 @media screen and (max-width:620px){
-  .ad_banner{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
+  
+  /* 메인배너 */
+  .abtn{
+    top: 38%;
+    left: 2rem;
+    transform: translateY(-50px);
+  }
+  .fa-angle-left:before, .fa-angle-right:before{
+    font-size: 6rem;
+  }
+  .bullet li{
+    top: 33.5rem;
+    left: 3.5rem;
+  }
+  .cont{
+    margin-bottom: 0;
   }
   .slide_bg{
     width: 100%;
@@ -292,9 +392,12 @@
     object-fit: cover;
   }
   
+  /* 더 많은 이야기 */
   .story{
     padding-top: 44rem;
   }
+
+  /* section3 브랜드 철학 */
   .brand_box{
     margin-top: 4rem;
   }
@@ -317,6 +420,7 @@
     margin-top: 10rem;
   }
 
+  /* section4 식재료 이야기 */
   .food{
     padding: 0 1.5rem;
   }
@@ -324,14 +428,13 @@
     width: auto;
     height: auto;
   }
-
   .food_txt figcaption{
     width: auto;
     height: auto;
     border-bottom: 0;
   }
 
-
+  /* section5 가맹점 */
   .branch_txt{
     margin-right: 0;
   }

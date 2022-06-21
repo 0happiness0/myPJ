@@ -4,10 +4,22 @@ html{
   scroll-behavior: smooth;
 }
 
-
+/* 햄버거 버튼 */
 .ham{
   display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 2.2rem;
+  /* right: 6rem; */
 }
+.ham::before{
+  content: '\f0c9';
+  display: block;
+  font-family: fontawesome;
+  font-size: 3rem;
+  color: #000;
+}
+
 h2.title{
   font-size: 2.4rem;
   color: #373737;
@@ -21,13 +33,16 @@ h2.title{
 input[type="checkbox"]{
   display: none;
 }
+input[type="checkbox"] + label{
+  font-size: 1.5rem;
+}
 input[type="checkbox"] + label span{
   display: inline-block;
   width: 2.5rem;
   height: 2.5rem;
   background: url(/images/icon_chb.png) no-repeat 0 .1rem/cover;
-  vertical-align: middle;
-  margin-right: .8rem;
+  vertical-align: -0.7rem;
+  margin: .8rem .8rem 0 0;
 }
 input[type="checkbox"]:checked + label span{
   background: url(/images/icon_chb.png) no-repeat 0 -2.4rem/cover;
@@ -48,7 +63,6 @@ em{
 }
 .top{
   width: 117rem;
-  min-height: 9rem;
   background-color: #fff;
 }
 .top > ul{
@@ -75,14 +89,17 @@ em{
 .gnb{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 6rem;
   line-height: 5rem;
 }
-.top_logo a{
+.top_log > a{
   display: inline-block;
   width: 10.9rem;
   height: 4.5rem;
-  background: url(/images/h1_logo.png) no-repeat;
-  margin-left: 3rem;
+  background: url(../images/h1_logo.png) no-repeat;
+  margin-top: 1.8rem;
+  z-index: 9999;
 }
 .gnb_list > ul{
   display: flex;
@@ -110,7 +127,7 @@ em{
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
-  padding: 1rem 3.3rem 2.5rem;
+  padding: 1rem 3.3rem 2.2rem;
 }
 .gnb_list > ul > li > a::after{
   content: '';
@@ -146,11 +163,11 @@ em{
 #top.on .top > ul{
   display: none;
 }
-#top.on .top_logo a{
+#top.on .top_logo > a{
   display: inline-block;
-  width: 5rem;
-  height: 4rem;
-  background: url(/images/m_h1_logo.png) no-repeat;
+  width: 2.7rem;
+  height: 2.8rem;
+  background: url(../images/bg_w_h1_logo.png) no-repeat 0/cover;
 }
 #top.on .gnb a {
   color: #fff;
@@ -198,8 +215,8 @@ em{
   font-weight: normal;
 }
 .smenu > ol > li:hover > a{ 
-  color: #373737;  
-  border-bottom: 1px solid #000;
+  color: none;  
+  border-bottom: 1px solid #333;
 }
 
 /* 메인영역 */
@@ -239,6 +256,9 @@ em{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+.privacy{
+  font-weight: bold;
 }
 .notice a{
   padding: 0 min(1.3rem, 2vw);
@@ -298,7 +318,7 @@ address li:first-child a{
 }
 .award{
   position: absolute;
-  top: -26.6rem;
+  top: -26.2rem;
   right: 0;
 }
 

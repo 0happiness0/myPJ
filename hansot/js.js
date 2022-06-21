@@ -1,10 +1,10 @@
 let scTop;
 let tbtn;
 
-
 window.addEventListener("DOMContentLoaded", loadFn);
 
 function loadFn() {
+
   const slide = document.querySelector(".slide");
   const indic = document.querySelectorAll(".indic li");
   let setSeq = slide.querySelectorAll("li");
@@ -89,8 +89,6 @@ function loadFn() {
     if (idx !== 0) ele.classList.add("scAct");
   });
 
-}
-
 window.addEventListener('scroll', () => {
 
   // 스크롤 위치표시
@@ -107,3 +105,61 @@ window.addEventListener('scroll', () => {
   else
     tbtn.classList.remove("on");
 });
+
+}
+
+// 팝업창 닫기
+function popupClose() { //팝업창 지우기
+  $('.ad_banner').hide();
+  PopupBgDisplay(); 
+}
+
+// 하루동안 열지 않기
+// 화면 시작 시 쿠키 값이 있는지 없는지를 확인
+function setCookie(name, value, expiredays){
+	var today = new Date();
+
+	console.log(today.getDate())
+
+	today.setDate(today.getDate() + expiredays); // 현재시간에 하루를 더함 
+
+	document.cookie = name + '=' + escape(value) + '; expires=' + today.toGMTString();
+
+}
+	
+function getCookie(name) {
+
+	var cookie = document.cookie;
+	
+	if (document.cookie != "") {
+		var cookie_array = cookie.split("; ");
+		console.log(cookie_array)
+		for ( var index in cookie_array) {
+			var cookie_name = cookie_array[index].split("=");
+			if (cookie_name[0] == "mycookie") {
+				return cookie_name[1];
+			}
+		}
+	}
+	return;
+}
+// 쿠키 값이 없으면 모달창 보이고, 있으면 숨김
+$(".notToday").click(function() {
+	$(".ad_banner").modal("hide");
+	setCookie("mycookie", 'popupEnd', 1);
+})
+
+var checkCookie = getCookie("mycookie");
+	
+if(checkCookie == 'popupEnd') {
+	$(".ad_banner").modal("hide");
+} else {
+	$('.ad_banner').modal("show");	
+}
+
+// 햄버거 버튼
+function showGnb(){
+  let tg = document.querySelector(".top");
+  tg.classList.toggle("on");
+
+}
