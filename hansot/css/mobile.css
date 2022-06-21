@@ -1,53 +1,25 @@
-@media screen and (max-width:1023px) {
-  
-  /* 하단영역 */
-  .info{
-    margin-top: 6rem;
-    position: relative;
-    min-height: 25rem;
-  }
-  .notice li:nth-child(1), .notice li:nth-child(2){
-    display: none;
-  }
-  .info_line, address ul, address ol{
-    display: none;
-  }
-  .ceo_info{
-    display: block;
-    text-align: center;
-    margin-top: 3rem;
-    font-size: 1.5rem;
-    border-top: 1px solid #dfb206;
-    border-bottom: 1px solid #dfb206;
-    padding: 1.5rem 0;
-  }
-  .copy{
-    margin-top: 8rem;
-  }
-  .award{
-    top: -12rem;
-    right: 50%;
-    transform: translateX(50%);
-  }
-}
+@media screen and (max-width:800px) {
 
-
-@media screen and (max-width:800px){
   /* 상단영역 */
-  .ad_banner{
+  .ad_banner {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
   }
 
-  #top.on .top{
+  #top.on .top {
     display: none;
   }
-  .top > ul > li:last-child{
-    display: none;
+
+  .top.on .top>ul>li:last-child {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-  .top > ul > li > a{
+
+  .top>ul>li>a {
     position: absolute;
     top: 1rem;
     left: 20%;
@@ -58,52 +30,32 @@
     z-index: 5;
   }
 
-  .top_log > a{
+  .top_log>a {
     display: inline-block;
     width: 2.5rem;
     height: 2.6rem;
     background: url(../images/m_h1_logo.png) no-repeat 0/cover;
     margin-left: 2rem;
   }
-  .gnb_list{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(0, 0, 0, 0.8);
-  }
-  .gnb_list ul{
-    display: block;
-    position: absolute;
-    top: 10rem;
-    left: 20%;
-    transform: translateX(-50%);
-    text-align: left;
-  }
-  .gnb_list ul li a{
-    display: block;
-    color: #fff;
-    font-size: 1.5rem;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 
   /* 햄버거 버튼 */
   .gnb_list{
-    display: none; 
+    display: none;
   }
-  .ham{
+
+  .ham {
     display: block;
   }
-  .top.on .ham{
+
+  .top.on .ham {
     position: absolute;
     top: .5rem;
     right: 5rem;
     color: #fff;
     z-index: 3;
   }
-  .top.on .ham::before{
+
+  .top.on .ham::before {
     content: '\f00d';
     position: absolute;
     top: .7rem;
@@ -111,19 +63,21 @@
     font-size: 4rem;
     color: #fff;
   }
-  .top.on .gnb_list{
+
+  .top.on .gnb_list {
     display: block;
   }
-  .gnb_list{
+
+  .gnb_list {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgb(0, 0, 0, 0.8);
-    z-index: 3;
   }
-  .gnb_list ul{
+
+  .gnb_list ul {
     display: block;
     position: absolute;
     top: 10rem;
@@ -131,229 +85,338 @@
     transform: translateX(-50%);
     text-align: left;
   }
-  .gnb_list > ul > li > a{
-    font-size: 2.5rem;
+
+  .gnb_list>ul>li>a {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0 2.8rem;
+    font-size: 1.6rem;
     line-height: 6rem;
     color: #fff;
   }
-  .gnb_list::after{ /* 서브메뉴 배경 */
+
+  .gnb_list::after {
+    /* 서브메뉴 배경 */
     display: none;
+    top: 16.2rem;
+    z-index: -1;
   }
-  
+  .gnb_list:hover::after {
+    height: 22.5rem;
+  }
+
   /* 서브메뉴 */
-  .smenu{
+  .smenu {
     position: static;
     top: 5rem;
-    left: 0;
+    left: 20%;
+    width: 100%;
+    min-height: 22rem;
     text-align: left;
+    z-index: 1;
   }
-  .smenu a{
-    font-size: 1.6rem;
-    line-height: 4rem;
-    color: #000;
-  }
-  .smenu ol{
+  .smenu > ol{
+    margin-left: 4rem;
     background-color: #eeecec;
   }
-  .smenu > ol > li > a{
-    color: #666;
-    line-height: 6rem;
+  .smenu > ol > li{
     text-align: left;
   }
-  
+  .smenu > ol > li >a {
+    font-size: 1.3rem;
+    line-height: 7rem;
+    color: #000;
+  }
+  .smenu > ol > li:hover > a{
+    border-bottom: none;
+  }
 
-    /************ index ************/
+  /* 하단영역 */
+  .info {
+    margin-top: 6rem;
+    position: relative;
+    min-height: 25rem;
+  }
 
-    .story h2.title{
-      display: none;
-    }
-    .story_box ul{
-      display: block;
-    }
-    .story_box ul li{
-      width: 90%;
-      margin: 0 auto;
-      margin-bottom: 2rem;
-    }
-    .story_box ul li:last-child{
-      margin-right: 2rem;
-    }
-    /* 브랜드 철학 */
-    .brand::after{
+  .notice li:nth-child(1),
+  .notice li:nth-child(2) {
+    display: none;
+  }
+
+  .info_line{
+    display: none;
+  }
+
+  .ceo_info {
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    border-top: 1px solid #dfb206;
+    border-bottom: 1px solid #dfb206;
+    padding: 1.5rem 0;
+  }
+  .addr_box{
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .p_addr{
+    display: none;
+  }
+  .m_addr{
+    display: block;
+    line-height: 2.3rem;
+  }
+  .m_addr > span{
+    font-size: 1.4rem;
+  }
+
+  .copy {
+    margin-top: 8rem;
+  }
+
+  .award {
+    top: -12rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  /************ index ************/
+  .story h2.title {
+    display: none;
+  }
+
+  .story_box ul {
+    display: block;
+  }
+
+  .story_box ul li {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  .story_box ul li:last-child {
+    margin-right: 2rem;
+  }
+
+  /* 브랜드 철학 */
+  .brand::after {
     right: 50%;
     transform: translateX(50%);
     width: 80%;
     height: 100%;
-    }
-    .btxt{
-      height: 48rem;
-      padding: 4.6rem 0 0 0;
-    }
-    .brand_images{
-      height: 60rem;
-    }
-    .bold_txt{
-      font-size: 2.8rem;
-    }
+  }
 
-    /* 식재료 이야기 */
-    .food_txt.fig_txt{
-      height: 38rem;
-    }
-    .food_box img{
-      left: 0;
-    }
-    .normal_txt{
-      line-height: 1.5;
-    }
+  .btxt {
+    height: 48rem;
+    padding: 4.6rem 0 0 0;
+  }
 
-    /* 가맹점주  */
-    .branch_box1 figcaption{
-      height: 15rem;
-    }
-    .branch_box1 figcaption b{
-      font-size: 1.8rem;
-      font-weight: normal;
-    }
-    .branch_box1 .bold_txt{
+  .brand_images {
+    height: 60rem;
+  }
+
+  .bold_txt {
+    font-size: 2.8rem;
+  }
+
+  /* 식재료 이야기 */
+  .food_txt.fig_txt {
+    height: 38rem;
+  }
+
+  .food_box img {
+    left: 0;
+  }
+
+  .normal_txt {
+    line-height: 1.5;
+  }
+
+  /* 가맹점주  */
+  .branch_box1 figcaption {
+    height: 15rem;
+  }
+
+  .branch_box1 figcaption b {
+    font-size: 1.8rem;
+    font-weight: normal;
+  }
+
+  .branch_box1 .bold_txt {
     font-size: 2.5rem;
-    }
-    .branch_box1 figcaption b{
-      font-size: 1.8rem;
-    }
-    .fig_txt{
-      width: 100%;
-    }
-    .fig_txt .arrow_btn{
-      margin-top: 2rem;
-      font-size: 1.3rem;
-    }
+  }
+
+  .branch_box1 figcaption b {
+    font-size: 1.8rem;
+  }
+
+  .fig_txt {
+    width: 100%;
+  }
+
+  .fig_txt .arrow_btn {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+  }
 
   /************ login ************/
-  .top > ul{
+  .top>ul {
     display: none;
   }
-  .login_cont{
+
+  .login_cont {
     display: block;
     padding-top: 0;
     padding-bottom: 6rem;
   }
-  .login_box{
+
+  .login_box {
     display: block;
   }
-  .login_cont .left_box{
+
+  .login_cont .left_box {
     width: 100%;
     min-height: 0;
     margin-right: 0;
     border-top: none;
     padding: 3.5rem 1.5rem;
   }
-  .login_cont .left_box h2{
+
+  .login_cont .left_box h2 {
     font-size: 2.4rem;
     text-align-last: left;
     margin: 0 0 2.5rem 3rem;
   }
-  .login_cont .left_box h2::before{
+
+  .login_cont .left_box h2::before {
     top: 4rem;
     left: 1.5rem;
     width: 2rem;
     height: 2.4rem;
   }
-  .login_cont .left_box input[type=text], .left_box input[type=password]{
+
+  .login_cont .left_box input[type=text],
+  .left_box input[type=password] {
     width: 100%;
   }
-  .save_id{
+
+  .save_id {
     width: 50%;
     text-align: left;
   }
-  .find{
+
+  .find {
     float: left;
     width: 50%;
     text-align: right;
   }
-  .login_btn{
+
+  .login_btn {
     width: 100%;
     height: 5rem;
     margin-top: 6rem;
   }
-  .right_box{
+
+  .right_box {
     width: 100%;
     padding: 0 1.5rem 2rem;
   }
-  .right_box figcaption{
+
+  .right_box figcaption {
     margin-top: 0;
     border-top: 1px solid #eeecec;
   }
-  .right_box .images, .right_box figcaption p{
+
+  .right_box .images,
+  .right_box figcaption p {
     display: none;
   }
-  .right_box figcaption h3{
+
+  .right_box figcaption h3 {
     font-size: 1.5rem;
     margin: 2.5rem 0;
   }
-  .join_btn{
+
+  .join_btn {
     width: 100%;
     height: 5rem;
     margin: 0;
   }
 
   /************ join ************/
-  #join{
+  #join {
     padding-bottom: 6rem;
   }
-  .join > h2{
+
+  .join>h2 {
     text-align: center;
     padding: 3.7rem 0 0;
     font-size: 2.4rem;
     font-weight: bold;
   }
-  .agree_title{
+
+  .agree_title {
     display: block;
     padding: 0;
   }
-  .agree_title::before{
+
+  .agree_title::before {
     top: -0.1rem;
     width: 13rem;
     height: 0.25rem;
   }
-  .left_box{
+
+  .left_box {
     width: 100%;
     text-align: center;
     padding: 2.5rem 0 1rem;
   }
-  .left_box b{
+
+  .left_box b {
     font-size: 3.6rem;
     font-weight: normal;
   }
-  .left_box > span{
+
+  .left_box>span {
     font-size: 2rem;
   }
-  .left_box > p{
+
+  .left_box>p {
     margin-top: 3rem;
   }
-  .right_box{
+
+  .right_box {
     width: 100%;
     margin-top: 0;
   }
-  .right_box h3{
+
+  .right_box h3 {
     margin-top: 3rem;
     font-size: 1.8rem;
   }
-  .right_box h3::before{
+
+  .right_box h3::before {
     height: 2rem;
     margin-right: 1rem;
   }
-  .txt_box{
+
+  .txt_box {
     width: 100%;
     margin-top: 2rem;
   }
-  .all_agree{
+
+  .all_agree {
     margin-top: 5rem;
   }
-  #all_agree{
+
+  #all_agree {
     font-size: 1.5rem;
   }
-  .next_btn{
+
+  .next_btn {
     width: 100%;
     height: 5rem;
     margin-top: 2rem;
@@ -362,49 +425,56 @@
 
 }
 
-@media screen and (max-width:620px){
-  
+@media screen and (max-width:620px) {
+
   /* 메인배너 */
-  .abtn{
+  .abtn {
     top: 38%;
     left: 2rem;
     transform: translateY(-50px);
   }
-  .fa-angle-left:before, .fa-angle-right:before{
+
+  .fa-angle-left:before,
+  .fa-angle-right:before {
     font-size: 6rem;
   }
-  .bullet li{
+
+  .bullet li {
     top: 33.5rem;
     left: 3.5rem;
   }
-  .cont{
+
+  .cont {
     margin-bottom: 0;
   }
-  .slide_bg{
+
+  .slide_bg {
     width: 100%;
     height: 38rem;
   }
-  .slide{
+
+  .slide {
     width: 100%;
     height: 100%;
   }
-  .slide li img{
+
+  .slide li img {
     object-fit: cover;
   }
-  
+
   /* 더 많은 이야기 */
-  .story{
+  .story {
     padding-top: 44rem;
   }
 
   /* section3 브랜드 철학 */
-  .brand_box{
+  .brand_box {
     margin-top: 4rem;
   }
-  .brand img{
+  .brand img {
     object-fit: cover;
   }
-  .btxt{
+  .btxt {
     width: 90%;
     height: 90%;
     top: 50%;
@@ -412,59 +482,73 @@
     transform: translate(-50%, -50%);
     padding: 6rem 2rem 6rem;
   }
-  .btxt::before{
+  .btxt::before {
     width: 100%;
     height: 100%;
   }
-  .brand_btn{
+
+  .brand_btn {
     margin-top: 10rem;
   }
 
   /* section4 식재료 이야기 */
-  .food{
+  .food {
     padding: 0 1.5rem;
   }
-  .food_txt .images{
+
+  .food_txt .images {
     width: auto;
     height: auto;
   }
-  .food_txt figcaption{
+
+  .food_txt figcaption {
     width: auto;
     height: auto;
     border-bottom: 0;
   }
 
   /* section5 가맹점 */
-  .branch_txt{
+  .branch_txt {
     margin-right: 0;
   }
-  .branch_wrap1{
+
+  .branch_wrap1 {
     display: block;
     width: 90%;
     margin: 0 auto;
   }
-  .branch_wrap1 li:first-child{
+
+  .bb{
+    width: 100%;
+  }
+
+  .branch_wrap1 li:first-child {
     margin-top: -10rem;
     margin-right: 0;
   }
-  .branch_wrap1 li:last-child{
+
+  .branch_wrap1 li:last-child {
     margin-top: 2rem;
   }
-  .branch_cont figcaption{
+
+  .branch_cont figcaption {
     height: 15rem;
   }
-  .branch_cont figcaption b{
+
+  .branch_cont figcaption b {
     font-size: 1.8rem;
     word-spacing: 0;
   }
-  .branch_cont figcaption .arrow_btn{
+
+  .branch_cont figcaption .arrow_btn {
     bottom: 3rem;
   }
 
 
-   /* top버튼 */
-   .tbtn, .fi.fi-angle-up{
+  /* top버튼 */
+  .tbtn,
+  .fi.fi-angle-up {
     display: none;
-    }
-  
+  }
+
 }

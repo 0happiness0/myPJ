@@ -268,13 +268,17 @@
   .food_txt > figure{
     width: 100%;
   }
-  .food_txt figcaption{
+  .food_txt .bar{
     position: relative;
     float: left;
     width: 37rem;
     height: 45rem;
     padding: 2.5rem 2.8rem 0;
     border-bottom: .6rem solid #373737;
+  }
+  .food_txt:hover .bar::after{
+    left: 0;
+    width: 100%;
   }
   .food_txt .images{
     float: left;
@@ -295,11 +299,24 @@
     font-size: 1.6rem;
   }
   .food_txt .arrow_btn{
+    position: relative;
+    top: 0;
+    left: 2.5rem;
     margin: 4.5rem 0 3rem;
   }
-  .food_box:hover .food_btn::before,
-  .food_box:hover .food_btn::after{
-    color: #f2c000;
+  .food_txt .arrow_btn::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -0.8rem;
+    left: -2.3rem;
+    width: 2rem;
+    height: 2rem;
+    background: url(../images/btn_link.png) no-repeat left top/cover;
+    transition: .4s;
+  }
+  .food_txt:hover .arrow_btn::before{
+    background-position: right top;
   }
 
   /* section5 가맹점 */
@@ -337,21 +354,17 @@
     width: 100%;
     height: 100%;
   }
-  .branch_cont figcaption{
+  .branch_cont .bar{
     position: relative;
+    width: 37rem;
     height: 21rem;
     background-color: #ddd;
     padding: 2.5rem 2.8rem 0;
+    border-bottom: .6rem solid #373737;
   }
-  .branch_cont figcaption::after{
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
+  .branch_cont:hover .bar::after{
     left: 0;
     width: 100%;
-    height: 0.6rem;
-    background-color: #333;
   }
   .branch_cont figcaption b{
     font-size: min(2.4rem, 2.5vw);
@@ -359,11 +372,28 @@
     font-weight: bold;
     word-spacing: -0.40rem;
   }
-  .branch_cont figcaption .arrow_btn{
-    position: absolute;
-    bottom: 2rem;
-    font-size: 1.3rem;
+  .branch_cont .arrow_btn{
+    position: relative;
+    top: 6.5rem;
+    left: 2.5rem;
+    font-size: 1.5rem;
   }
+  .branch_cont .arrow_btn::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -0.7rem;
+    left: -2.3rem;
+    width: 2rem;
+    height: 2rem;
+    background: url(../images/btn_link.png) no-repeat left top/cover;
+    transition: .4s;
+  }
+  .branch_cont:hover .arrow_btn::before{
+    background-position: right top;
+  }
+
+
   .bb{
     width: 37rem;
     height: 44rem;

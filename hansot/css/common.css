@@ -284,16 +284,20 @@ address{
   font-family: fontawesome;
   font-size: 2rem;
   margin-left: .8rem;
-
 }
-address ul, address ol{
-  display: flex;
-  justify-content: center;
-  line-height: 1.8;
+.addr_box.m_addr{
+  display: none;
 }
-address a, .copy{
+.addr_box{
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
   font-size: 1.5rem;
-  color: #333;
+  line-height: 1.8;
+  text-align: center;
+}
+.addr_box > span, .copy{
+  font-size: 1.5rem;
 }
 address li:first-child a{
   padding-left: 0;
