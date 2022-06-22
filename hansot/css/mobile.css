@@ -183,6 +183,10 @@
   }
 
   /************ index ************/
+  .bullet li{
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .story h2.title {
     display: none;
   }
@@ -259,7 +263,7 @@
 
   .fig_txt .arrow_btn {
     margin-top: 2rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   /************ login ************/
@@ -441,7 +445,7 @@
 
   .bullet li {
     top: 33.5rem;
-    left: 3.5rem;
+    left: 3.3rem;
   }
 
   .cont {
@@ -506,6 +510,12 @@
     height: auto;
     border-bottom: 0;
   }
+  .food_txt .bar::after{
+    display: none;
+  }
+  .food_txt:hover .arrow_btn::before{
+    background-position: left top;
+  }
 
   /* section5 가맹점 */
   .branch_txt {
@@ -544,6 +554,8 @@
     bottom: 3rem;
   }
 
+
+  
 
   /* top버튼 */
   .tbtn,

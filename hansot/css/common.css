@@ -236,7 +236,7 @@ em{
   margin-top: 1rem;
 }
 .food_txt .arrow_btn{
-  margin-top: 5em;
+  /* margin-top: 5em; */
   font-size: 1.5rem;
   transition: .3s ease;
 }
